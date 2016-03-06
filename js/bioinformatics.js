@@ -6,9 +6,8 @@
  * Date: March 6, 2016
  */
 function askInput(id1, id2) {	// prompts the user for two inputs
-	input1 = prompt("Enter your input 1: ");
-	input2 = prompt("Enter your input 2: ");
-	answer = 0;
+	var input1 = prompt("Enter your input 1: ");
+	var input2 = prompt("Enter your input 2: ");
 
 	setInputOutputTextFields(input1, input2, id1, id2);
 }
