@@ -51,7 +51,7 @@
 		    </div>
 		  </div>
 
-		  <div class="col-sm-6 col-md-4">	<!-- Is String Valid div -->
+		  <div class="col-sm-6 col-md-4">	<!-- Is Valid String div -->
 		    <div class="thumbnail" style="background-color: #66FF00;">
 		      <div class="caption" style="text-align:center;">
 		        <h3 style="font-weight:bold;">Is Valid String</h3>	<!-- Input and Output details -->
@@ -72,8 +72,9 @@
 		        <h3 style="font-weight:bold;">Get Skew Number</h3>	<!-- Input and Output details -->
 		        <p><span style="font-weight: bold;">Input:</span> String genome and Int n <br> <span style="font-weight: bold;">Output:</span> Number of the Gs - Cs in Int n position of String genome</p>
 		        <!-- Execute Button will ask for input, and will write input and output in the text fields -->
-		        <p><a href="#" class="btn btn-primary" role="button">Execute</a></p>
-		        <input style="background-color: #C8C8C8;" type="text" size="40" hidden="true" readonly/><br/><br/>
+		        <p><a href="#" onclick="getSkew('skewNumberInput', 'skewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
+		        <input style="background-color: #C8C8C8;" id="skewNumberInput" type="text" size="40" hidden readonly/><br/><br/>
+		        <input style="background-color: #C8C8C8;" id="skewNumberOutput" type="text" size="40" hidden readonly/><br/><br/>
 		      </div>
 		    </div>
 		  </div>
