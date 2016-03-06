@@ -68,3 +68,22 @@ function getSkew(id1, id2) {	// computes Gs - Cs in input1 at a specified index 
 	} else // if invalid inputs
 		document.getElementById(id2).setAttribute("value", "Output: Error! Invalid input!");	
 }
+
+function getMaxSkewN(id1, id2){	// computes the max Gs - Cs in input1 starting from index 1 until the specified index of input2, indexing starts at 1
+	askInput(id1, id2);
+	// input1's length should be greater than 0 and should be greater or equal to input2, and input2 should be greater than zero
+	if ((input2 > 0) && (input1.length > 0) && (input1.length >= input2)){	
+		var countG=0, countC=0;
+		for(i=1; i<=input2; i++){	// iterates from 1 up to input2
+			if (input1.charAt(i-1) == "G")	// if character on index i-1 is equal to G, countG will be incremented
+				countG++;
+			else if (input1.charAt(i-1) == "C")	// if character on index i-1 is equal to C, countC will be incremented
+				countC++;
+
+			if (i == 1 || ((countG - countC) > answer))	// always stores the greater Gs-Cs in answer to get the max skew number
+				answer = countG - countC;
+		}
+		document.getElementById(id2).setAttribute("value", "Output: " + answer);	// sets the output in the text field
+	} else // if invalid inputs
+		document.getElementById(id2).setAttribute("value", "Output: Error! Invalid input!");	
+}
