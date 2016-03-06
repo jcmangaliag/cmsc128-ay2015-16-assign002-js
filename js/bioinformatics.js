@@ -44,3 +44,14 @@ function countSubstrPattern(id1, id2){
 	}
 	document.getElementById(id2).setAttribute("value", "Output: " + answer);
 }
+
+function isValidString(id1, id2){
+	askInput(id1, id2);
+
+	answer = true;
+	for(i=0; i<input1.length; i++) {
+		if (input2.indexOf(input1.charAt(i)) == -1)
+			answer = false;
+	}
+	document.getElementById(id2).setAttribute("value", "Output: " + answer);
+}
