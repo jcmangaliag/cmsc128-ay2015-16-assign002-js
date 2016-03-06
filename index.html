@@ -2,8 +2,8 @@
   - Author: Juan Carlo M. Mangaliag
   - Section: CMSC 128 AB-2L
   - Assign 002: Programming a Simple Bioinformatics Library
-  - Program Description: This is a simple bioinformatics library that can get the hamming distance of two strings, count the substring pattern, check if string is valid given an alphabet, get the skew, and get the max and min skew number.
-  - Date: March 11, 2016
+  - Program Description: This is a simple bioinformatics library that can get the hamming distance of two strings, count the substring pattern, check if string is valid given an alphabet, get the skew number, and get the max and min skew number.
+  - Date: March 6, 2016
   -->
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
 		        <h3 style="font-weight:bold;">Get Hamming Distance</h3>	<!-- Input and Output details -->
 		        <p><span style="font-weight: bold;">Input:</span> String str1 and String str2 <br> <span style="font-weight: bold;">Output:</span> Number of inversions of String str1 to String str2 and vice versa </p>	
 		        <!-- Execute Button will ask for input, and will write input and output in the text fields -->
-		        <p><a href="#" onclick="getHammingDistance('hammingDistanceInput', 'hammingDistanceOutput')" class="btn btn-primary" role="button">Execute</a></p>
+		        <p><a href="#" onclick="askInput('hammingDistanceInput', 'hammingDistanceOutput')" class="btn btn-primary" role="button">Execute</a></p>
 		        <input style="background-color: #C8C8C8;" id="hammingDistanceInput" type="text" size="40" hidden readonly/><br/><br/>
 		        <input style="background-color: #C8C8C8;" id="hammingDistanceOutput" type="text" size="40" hidden readonly/><br/><br/>
 		      </div>
@@ -43,7 +43,7 @@
 		        <h3 style="font-weight:bold;">Count Substring Pattern</h3>	<!-- Input and Output details -->
 		        <p><span style="font-weight: bold;">Input:</span> String original and String pattern <br> <span style="font-weight: bold;">Output:</span> Number of occurence of String pattern in String original</p>
 		        <!-- Execute Button will ask for input, and will write input and output in the text fields -->
-		        <p><a href="#" onclick="countSubstrPattern('substrPatternInput', 'substrPatternOutput')" class="btn btn-primary" role="button">Execute</a></p>
+		        <p><a href="#" onclick="askInput('substrPatternInput', 'substrPatternOutput')" class="btn btn-primary" role="button">Execute</a></p>
 		        <input style="background-color: #C8C8C8;" id="substrPatternInput" type="text" size="40" hidden readonly/><br/><br/>
 		        <input style="background-color: #C8C8C8;" id="substrPatternOutput" type="text" size="40" hidden readonly/><br/><br/>
 		      </div>
@@ -56,7 +56,7 @@
 		        <h3 style="font-weight:bold;">Is Valid String</h3>	<!-- Input and Output details -->
 		        <p><span style="font-weight: bold;">Input:</span> String str1 and String alphabet <br> <span style="font-weight: bold;">Output:</span> True if String str1's characters are in String alphabet, otherwise False</p>
 		        <!-- Execute Button will ask for input, and will write input and output in the text fields -->
-		        <p><a href="#" onclick="isValidString('stringValidInput', 'stringValidOutput')" class="btn btn-primary" role="button">Execute</a></p>
+		        <p><a href="#" onclick="askInput('stringValidInput', 'stringValidOutput')" class="btn btn-primary" role="button">Execute</a></p>
 		        <input style="background-color: #C8C8C8;" id="stringValidInput" type="text" size="40" hidden readonly/><br/><br/>
 		        <input style="background-color: #C8C8C8;" id="stringValidOutput" type="text" size="40" hidden readonly/><br/><br/>
 		      </div>
@@ -71,7 +71,7 @@
 		        <h3 style="font-weight:bold;">Get Skew Number</h3>	<!-- Input and Output details -->
 		        <p><span style="font-weight: bold;">Input:</span> String genome and Int n <br> <span style="font-weight: bold;">Output:</span> Number of the Gs - Cs in Int n position of String genome</p>
 		        <!-- Execute Button will ask for input, and will write input and output in the text fields -->
-		        <p><a href="#" onclick="getSkew('skewNumberInput', 'skewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
+		        <p><a href="#" onclick="askInput('skewNumberInput', 'skewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
 		        <input style="background-color: #C8C8C8;" id="skewNumberInput" type="text" size="40" hidden readonly/><br/><br/>
 		        <input style="background-color: #C8C8C8;" id="skewNumberOutput" type="text" size="40" hidden readonly/><br/><br/>
 		      </div>
@@ -84,7 +84,7 @@
 		        <h3 style="font-weight:bold;">Get Max Skew Number</h3>	<!-- Input and Output details -->
 		        <p><span style="font-weight: bold;">Input:</span> String genome and Int n <br> <span style="font-weight: bold;">Output:</span> Number of max Gs - Cs from start to Int n position of String genome</p>
 		        <!-- Execute Button will ask for input, and will write input and output in the text fields -->
-		        <p><a href="#" onclick="getMinMaxSkewN('maxSkewNumberInput', 'maxSkewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
+		        <p><a href="#" onclick="askInput('maxSkewNumberInput', 'maxSkewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
 		        <input style="background-color: #C8C8C8;" id="maxSkewNumberInput" type="text" size="40" hidden readonly/><br/><br/>
 		        <input style="background-color: #C8C8C8;" id="maxSkewNumberOutput" type="text" size="40" hidden readonly/><br/><br/>
 		      </div>
@@ -97,7 +97,7 @@
 		        <h3 style="font-weight:bold;">Get Min Skew Number</h3>	<!-- Input and Output details -->
 		        <p><span style="font-weight: bold;">Input:</span> String genome and Int n <br> <span style="font-weight: bold;">Output:</span> Number of min Gs - Cs from start to Int n position of String genome</p>
 		        <!-- Execute Button will ask for input, and will write input and output in the text fields -->
-		        <p><a href="#" onclick="getMinMaxSkewN('minSkewNumberInput', 'minSkewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
+		        <p><a href="#" onclick="askInput('minSkewNumberInput', 'minSkewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
 		        <input style="background-color: #C8C8C8;" id="minSkewNumberInput" type="text" size="40" hidden readonly/><br/><br/>
 		        <input style="background-color: #C8C8C8;" id="minSkewNumberOutput" type="text" size="40" hidden readonly/><br/><br/>
 		      </div>
