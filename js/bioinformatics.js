@@ -69,7 +69,7 @@ function getSkew(id1, id2) {	// computes Gs - Cs in input1 at a specified index 
 		document.getElementById(id2).setAttribute("value", "Output: Error! Invalid input!");	
 }
 
-function getMaxSkewN(id1, id2){	// computes the max Gs - Cs in input1 starting from index 1 until the specified index of input2, indexing starts at 1
+function getMinMaxSkewN(id1, id2){	// computes the max Gs - Cs in input1 starting from index 1 until the specified index of input2, indexing starts at 1
 	askInput(id1, id2);
 	// input1's length should be greater than 0 and should be greater or equal to input2, and input2 should be greater than zero
 	if ((input2 > 0) && (input1.length > 0) && (input1.length >= input2)){	
@@ -79,8 +79,10 @@ function getMaxSkewN(id1, id2){	// computes the max Gs - Cs in input1 starting f
 				countG++;
 			else if (input1.charAt(i-1) == "C")	// if character on index i-1 is equal to C, countC will be incremented
 				countC++;
-
-			if (i == 1 || ((countG - countC) > answer))	// always stores the greater Gs-Cs in answer to get the max skew number
+			// determines first if the input is for max skew number or min skew number before computing
+			if ((id1 == "maxSkewNumberInput") && (i == 1 || ((countG - countC) > answer)))	// always stores the greater Gs-Cs in answer to get the max skew number
+				answer = countG - countC;
+			else if ((id1 == "minSkewNumberInput") && (i == 1 || ((countG - countC) < answer))) // always stores the lesser Gs-Cs in answer to get the min skew number
 				answer = countG - countC;
 		}
 		document.getElementById(id2).setAttribute("value", "Output: " + answer);	// sets the output in the text field

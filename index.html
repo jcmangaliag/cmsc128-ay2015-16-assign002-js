@@ -23,7 +23,6 @@
 		</div>
 
 		<!-- Options (6 panels) -->
-
 		<div class="row">	
 		  <div class="col-sm-6 col-md-4">	<!-- Get Hamming Distance div -->
 		    <div class="thumbnail" style="background-color: #66FF00;">
@@ -85,7 +84,7 @@
 		        <h3 style="font-weight:bold;">Get Max Skew Number</h3>	<!-- Input and Output details -->
 		        <p><span style="font-weight: bold;">Input:</span> String genome and Int n <br> <span style="font-weight: bold;">Output:</span> Number of max Gs - Cs from start to Int n position of String genome</p>
 		        <!-- Execute Button will ask for input, and will write input and output in the text fields -->
-		        <p><a href="#" onclick="getMaxSkewN('maxSkewNumberInput', 'maxSkewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
+		        <p><a href="#" onclick="getMinMaxSkewN('maxSkewNumberInput', 'maxSkewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
 		        <input style="background-color: #C8C8C8;" id="maxSkewNumberInput" type="text" size="40" hidden readonly/><br/><br/>
 		        <input style="background-color: #C8C8C8;" id="maxSkewNumberOutput" type="text" size="40" hidden readonly/><br/><br/>
 		      </div>
@@ -98,8 +97,9 @@
 		        <h3 style="font-weight:bold;">Get Min Skew Number</h3>	<!-- Input and Output details -->
 		        <p><span style="font-weight: bold;">Input:</span> String genome and Int n <br> <span style="font-weight: bold;">Output:</span> Number of min Gs - Cs from start to Int n position of String genome</p>
 		        <!-- Execute Button will ask for input, and will write input and output in the text fields -->
-		        <p><a href="#" class="btn btn-primary" role="button">Execute</a></p>
-		        <input style="background-color: #C8C8C8;" type="text" size="40" hidden="true" readonly/><br/><br/>
+		        <p><a href="#" onclick="getMinMaxSkewN('minSkewNumberInput', 'minSkewNumberOutput')" class="btn btn-primary" role="button">Execute</a></p>
+		        <input style="background-color: #C8C8C8;" id="minSkewNumberInput" type="text" size="40" hidden readonly/><br/><br/>
+		        <input style="background-color: #C8C8C8;" id="minSkewNumberOutput" type="text" size="40" hidden readonly/><br/><br/>
 		      </div>
 		    </div>
 		  </div>
